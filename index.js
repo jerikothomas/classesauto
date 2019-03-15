@@ -9,7 +9,7 @@ const aplikasi=new express();
 konekmongo.connect('mongodb://localhost:27017/classesauto')
     .then(()=>'Konek')
     .catch(err=>console.error('Ada Kesalaahan'));
-aplikasi.use(express.static('public'));
+aplikasi.use(express.static(path.join(__dirname, 'public')));
 aplikasi.use(expressEdge);
 aplikasi.set('views',__dirname+'/views');
 aplikasi.use(bodypass.json());
@@ -30,6 +30,11 @@ aplikasi.post('/saran',(req,res)=>{
     Kirim.create(req.body,(error,post)=>{
         res.redirect('/')
     })
+});
+
+aplikasi.get('/edit/:id',async(req,res)=>{
+    const infor=await Kirim.findById(req.params.id)
+    res.render('edpage',{infor});
 });
 
 aplikasi.listen(
