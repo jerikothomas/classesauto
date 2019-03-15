@@ -24,6 +24,7 @@
   "homepage": "https://github.com/jerikothomas/classesauto#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "express-edge": "^1.0.0",
     "startbootstrap-freelancer": "^5.0.3"
   },
   "devDependencies": {
