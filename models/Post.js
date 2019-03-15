@@ -2,9 +2,9 @@ const konek=require('mongoose');
 
 
 const PostS=new konek.Schema({
-    title:String,
-    description:String,
-    content:String
+    nama:String,
+    email:String,
+    pesan:String
 });
 
 const Post=konek.model('Post',PostS);
