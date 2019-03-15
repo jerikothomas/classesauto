@@ -6,8 +6,8 @@ const aplikasi=new express();
 aplikasi.use(express.static('public'));
 aplikasi.use(expressEdge);
 aplikasi.set('views',__dirname+'/views');
+
 aplikasi.get('/',(req,res)=>{
-    // res.sendFile(path.resolve(__dirname,'pages/index.html'));
     res.render('index');
 });
 
