@@ -2,7 +2,8 @@
   "name": "classesauto",
   "version": "1.0.0",
   "description": "Make the schedules of classes from schools or collage automatically arrange",
-  "main": "index.js",
+  "main": "index",
+  "typings": "index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
